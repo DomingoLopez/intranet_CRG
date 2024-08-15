@@ -1,0 +1,15 @@
+<h3 class="title-seccion">Mis Favoritos</h3>
+<ul class="list-group list-container" cdkDropList (cdkDropListDropped)="drop($event)">
+    <li class="list-group-item item-lista list-item-drag" 
+    *ngFor="let item of favoritos; let i = index"  cdkDrag>
+      <div class="row" >
+      <div class="col-md-2 ">
+        <app-menu-fav [menuItem]="item"></app-menu-fav> 
+      </div>
+      <div class="col-md-10 m-0 p-0 result-item-label ">
+          <a [href]="item.url"  target="_blank">{{item.label}}</a>
+      </div>
+      </div>
+    </li>
+  </ul>
+  

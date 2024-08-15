@@ -1,0 +1,57 @@
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <img src="../../../assets/images/logo.png"
+                      style="width: 185px;" alt="logo">
+                      <br><br>
+                    <h3 class="mt-1 mb-5 pb-1">Acceso a la Intranet</h3>
+                  </div>
+  
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" formControlName="user" id="form-control-user" class="form-control" placeholder="U97XXXX" />
+                      <div *ngIf="loginForm.get('user')?.invalid && (submitted)" class="text-danger">Indica el usuario</div>
+                    </div>
+                  
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="password" formControlName="password" id="form-control-password" class="form-control" placeholder="Contraseña" />
+                      <div *ngIf="loginForm.get('password')?.invalid && (submitted)" class="text-danger">Indica la contraseña</div>
+
+                    </div>
+                  
+                    <div class="text-center pt-1 mb-5 pb-1">
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-login btn-block fa-lg gradient-custom-2 mb-3" type="submit" [disabled]="loginForm.invalid">
+                        <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span *ngIf="!isLoading">Acceder</span>                     
+                        </button>
+                      <br>
+                      <a class="text-muted" href="#!">¿Problemas de acceso?</a>
+                    </div>
+                  </form>
+                  
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Consejos Ciberseguros</h4>
+                  <ul class="list-consejos">
+                    <li class="small mb-0 item-consejo-login">Recuerda usar Contraseñas seguras de 12 caracteres con 1 Mayúscula, 1 minúscula, 1 número y 1 carácter especial mínimo.</li>
+                    <br>
+                    <li class="small mb-0 item-consejo-login">Apaga la pantalla de tu pc cada vez que dejes tu puesto de trabajo</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

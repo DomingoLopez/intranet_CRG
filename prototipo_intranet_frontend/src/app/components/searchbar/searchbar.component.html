@@ -1,0 +1,83 @@
+<!--Search Box-->
+<div class="container searchbar-div">
+    <div class="input-group searchbar-input-group">
+        <span class="input-group-text"><mat-icon class="material-symbols-outlined">search</mat-icon></span>
+        <input type="text" class="form-control searchbar-input" 
+               placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2"
+               (focus)="onFocusSearchBar()"
+               (input) = "onSearchInput($event)"
+               [(ngModel)]="searchQuery"
+               spellcheck="false"
+               >
+        <!-- <input type="text" class="form-control searchbar-input" 
+            placeholder="Buscar" aria-label="Buscar" aria-describedby="button-addon2"
+            (focus)="onFocusSearchBar()"
+            (blur)="onBlurSearchBar()"
+            (input) = "onSearchInput($event)"
+            [(ngModel)]="searchQuery"
+            spellcheck="false"
+            > -->
+        <span class="clear-icon" (click)="closeSearchBox()" 
+                        [class.d-none]="!isResultBoxVisible" 
+                        [class.d-inline]="isResultBoxVisible"
+                        >
+            <mat-icon class="material-symbols-outlined">clear</mat-icon>
+        </span> 
+    </div>
+    <!-- <div id="search-results" class="scrollable-element"> -->
+    <div id="search-results" [class.d-none]="!isResultBoxVisible" [class.d-block]="isResultBoxVisible" class="scrollable-element">
+            <hr class="search-line">
+            <div class="row">
+                <div class="col-md-12 searchbar-resultados">
+                    <h3>FILTROS</h3>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="check-menu" checked>
+                            <label class="form-check-label checks-filtro-resultados" for="check-menu">
+                            Menú
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="check-normas">
+                            <label class="form-check-label checks-filtro-resultados" for="check-normas">
+                            Normas y comunicados
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="check-plantilla">
+                            <label class="form-check-label checks-filtro-resultados" for="check-plantilla">
+                            Plantilla y teléfonos
+                            </label>
+                      </div>
+                </div>
+            </div>
+            <hr class="search-line">
+            <div class="row">
+                <div class="col-md-6 searchbar-resultados">
+                    <h3>RESULTADOS</h3>
+                    <!--Componente de lista para mostrar los resultados de la búsqueda-->
+                    <ul *ngIf="resultSearch.length > 0" class="lista-resultados">
+                        <li class="row"
+                        *ngFor="let item of resultSearch"
+                        [ngClass]="{'active_result': item === activeResultSearchElement}"
+                        (mouseenter)="onSwitchingResultSearchElement($event, item)" 
+                        >
+                        <div class="col-md-2 ">
+                            <app-menu-fav *ngIf="isActive(item)  || item.is_fav" [menuItem]="item"></app-menu-fav>
+                        </div>
+                        <div class="col-md-10 m-0 p-0 result-item-label ">
+                            <div>
+                                <p class="search-breadcrumbs">{{item.ruta}}</p>
+                            </div>
+                            <div>
+                                <a *ngIf="item.url != '#' " [href]="item.url" target="_blank">{{item.label}}</a>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 searchbar-recientes">
+                    <h3>BÚSQUEDAS RECIENTES</h3>
+                </div>
+            </div>
+    </div>
+</div>

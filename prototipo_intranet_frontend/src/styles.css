@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --principal-color: #01785A;
+    --secondary-color: #004B3A;
+    --tertiary-color:#025a45;
+    --secondary-black:#2B4760;
+}
+  
+
+.cap-percent-width-70{
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.cap-percent-width-80{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.cap-percent-width-90{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+html, body { height: 100%; }
+
+body { 
+    margin: 0; font-family: "Source Sans Pro Semibold", sans-serif;
+}
+
+/*Hacemos cualquier elemento scrollable*/
+.scrollable-element {
+    overflow-y: auto;  
+}
+
+
+.title-seccion{
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+} 

@@ -1,0 +1,13 @@
+<div  class="div-fav" > 
+    <img class="img-fav" *ngIf="menuItem?.permitir_fav && menuItem?.is_fav" 
+         src="../../../assets/images/star_1.svg" 
+         alt="Quitar de favoritos"
+         (click)="switchFav()"
+         >
+    <img class="img-fav" *ngIf="menuItem?.permitir_fav && !menuItem?.is_fav" 
+         src="../../../assets/images/star_0.svg" 
+         alt="Añadir a favoritos"
+         (click)="switchFav()"
+         >
+    <span *ngIf="!menuItem?.permitir_fav"></span>
+</div>  

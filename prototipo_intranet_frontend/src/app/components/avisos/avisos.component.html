@@ -1,0 +1,28 @@
+<app-section-title titulo="Avisos"></app-section-title>
+<!--Carousel de avisos-->
+<div *ngIf="avisos.length > 0" id="carousel-avisos" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button *ngFor="let aviso of avisos; let i = index " type="button" data-bs-target="#carousel-avisos" [attr.data-bs-slide-to]="i"  [class.active]="i === 0" aria-current="true" ></button>
+    </div> 
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let aviso of avisos; let i = index" [class.active]="i === 0">
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title">{{ aviso.centro }} - {{aviso.nomcentro}}</h5>
+            <p class="card-text">{{ aviso.texto_aviso }}</p>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-avisos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-avisos" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div *ngIf="avisos.length == 0" id="carousel-avisos" class="carousel slide" data-bs-ride="carousel">
+  <p class="carousel-no-avisos-text">Sin avisos hasta el momento.</p>
+</div>

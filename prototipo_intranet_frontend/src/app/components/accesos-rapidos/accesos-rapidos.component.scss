@@ -1,0 +1,35 @@
+.custom-card{
+    max-width: 250px;
+    cursor: pointer;
+}
+
+.card-container{
+    margin: 30px 5px 0px 5px;
+}
+
+.card-body{
+    padding-left:0px;
+}
+
+.icon-card {
+
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que el div ocupe toda la altura */
+    width: 100%;
+    font-size:50px;
+    color:var(--secondary-color)
+}
+
+.card-name{
+    display: flex; /* Utiliza flexbox */
+    justify-content: left; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que el div ocupe toda la altura */
+    font-size:14px;
+    color: var(--principal-color);
+    padding-top:13px;
+    font-weight: bold;
+    align-items: center;
+}

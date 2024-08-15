@@ -1,0 +1,22 @@
+.show-more{
+    font-size: 15px;
+    display: inline-block;
+}
+
+.show-more-text{
+    font-size: 14px;
+    display: inline-block;
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.show-more-container{
+    display: inline;
+}
+
+.show-more-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}

@@ -1,0 +1,293 @@
+{
+    "menu": [
+      {
+        "id": 1,
+        "label": "GESTIÓN",
+        "order": 1,
+        "link": "#",
+        "allow_fav":false,
+        "childs":[
+            {   
+                "id": 23,
+                "label": "Información de Gestión",
+                "order": 1,
+                "link": "#",
+                "allow_fav":true,
+                "childs":[
+                    {   
+                        "id": 23,
+                        "label": "Riesgos",
+                        "order": 1,
+                        "link": "#",
+                        "allow_fav":true,
+                        "is_fav":true,
+                        "childs":[
+                            {   
+                                "id": 24,
+                                "label": "Activos Dudosos",
+                                "order": 1,
+                                "parent_id": 23,
+                                "link": "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERDUDSOSDOT0S",
+                                "type": "informe_webfocus",
+                                "allow_fav":false,
+                                "is_fav":false,
+                                "childs":[]
+                            },
+                            {   
+                                "id": 25,
+                                "label": "Fallidos",
+                                "order": 2,
+                                "parent_id": 23,
+                                "link": "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S",
+                                "type": "informe_webfocus",
+                                "allow_fav":true,
+                                "is_fav":true,
+                                "childs":[]
+                            }
+                        ]
+                    },
+                    {   
+                        "id": 26,
+                        "label": "Seguimiento de Objetivos",
+                        "order": 1,
+                        "link": "#",
+                        "type": "submenu_2",
+                        "allow_fav":true,
+                        "is_fav":false,
+                        "childs":[
+                            {   
+                                "id": 27,
+                                "label": "Seguimiento de Objetivos - 2024",
+                                "order": 1,
+                                "parent_id": 26,
+                                "link": "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERDUDSOSDOT0S",
+                                "type": "informe_webfocus",
+                                "allow_fav":true,
+                                "is_fav":true,
+                                "childs":[]
+                            },
+                            {   
+                                "id": 28,
+                                "label": "Seguimiento de Objetivos - 2023",
+                                "order": 2,
+                                "parent_id": 26,
+                                "link": "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S",
+                                "type": "informe_webfocus",
+                                "allow_fav":true,
+                                "is_fav":false,
+                                "childs":[]
+                            }
+                        ]
+                    },
+                    {   
+                        "id": 26,
+                        "label": "Prueba enlace suelto",
+                        "order": 1,
+                        "link": "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S",
+                        "type": "informe_webfocus",
+                        "allow_fav":true,
+                        "is_fav":false,
+                        "childs":[]
+                    }
+                ]
+
+            },
+            {   
+                "id": 34,
+                "label": "Información Comercial",
+                "order": 1,
+                "parent_id": 1,
+                "link": "#",
+                "type": "submenu",
+                "allow_fav":true,
+                "is_fav":false,
+                "childs":[]
+            }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "OPERATIVA",
+        "link": "#",
+        "type": "hub",
+        "allow_fav":false,
+        "is_fav":false,
+        "childs":[]
+      },
+      {
+        "id": 3,
+        "label": "SERVICIOS INTERNOS",
+        "link": "#",
+        "type": "hub",
+        "allow_fav":false,
+        "is_fav":false,
+        "childs":[]
+      },
+      {
+        "id": 4,
+        "label": "ACCESO ENLACES",
+        "link": "#",
+        "type": "hub",
+        "allow_fav":false,
+        "is_fav":false,
+        "childs":[]
+      },
+      {
+        "id": 5,
+        "label": "PORTAL O365",
+        "link": "#",
+        "type": "hub",
+        "allow_fav":false,
+        "is_fav":false,
+        "childs":[]
+      }          
+    ],
+    "avisos": [
+        {
+            "id": 1,       
+            "centro": 9352,             
+            "nomcentro":  "C.I. Desarrollo",    
+            "responsable": "9352 - C.I. Desarrollo"   ,
+            "fecha": "2024-03-31",              
+            "texto_aviso": "CORTE PROGRAMADO - Los servicios del CI estarán caídos durante toda la tarde debido a migración de servidores."      
+        },
+        {
+            "id": 1,       
+            "centro": 9352,             
+            "nomcentro":  "Administración Operativa y Seguridad",       
+            "fecha": "2024-03-31",              
+            "texto_aviso": "SEGURIDAD PROGRAMADA - Los servicios del CI estarán caídos durante toda la tarde debido a migración de servidores."      
+        }
+    ],
+    "normativa":[
+        {
+            "id": 1,       
+            "fecha": "23/04/2024",             
+            "tipo":  "Norma",       
+            "titulo": "205.05.002 - Operativa de seguros agrarios"            
+        },
+        {
+            "id": 2,       
+            "fecha": "21/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "175/2024 - Mejoras realizadas en la emisión de certificados"            
+        },
+        {
+            "id": 3,       
+            "fecha": "20/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "174/2024 - Consulta de titularidad de cuentas"            
+        },
+        {
+            "id": 4,       
+            "fecha": "19/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "173/2024 - Información del Core de Vida disponible en Posición Global Cliente"            
+        },
+        {
+            "id": 5,       
+            "fecha": "20/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "174/2024 - Consulta de titularidad de cuentas"            
+        },
+        {
+            "id": 6,       
+            "fecha": "19/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "173/2024 - Información del Core de Vida disponible en Posición Global Cliente"            
+        } ,
+        {
+            "id": 7,       
+            "fecha": "19/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "173/2024 - Información del Core de Vida disponible en Posición Global Cliente"            
+        },
+        {
+            "id": 8,       
+            "fecha": "20/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "174/2024 - Consulta de titularidad de cuentas"            
+        },
+        {
+            "id": 9,       
+            "fecha": "19/04/2024",             
+            "tipo":  "Comunicado",       
+            "titulo": "173/2024 - Información del Core de Vida disponible en Posición Global Cliente"            
+        }       
+    ],
+    "misaplicaciones":[
+        {
+            "id": 1,       
+            "titulo": "Desbloqueo usuarios windows",             
+            "link":  "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S"       
+        },
+        {
+            "id": 2,       
+            "titulo": "Admin. Blog Cuéntame",             
+            "link":  "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S"       
+        },
+        {
+            "id": 3,       
+            "titulo": "Consultas SSCC",             
+            "link":  "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S"       
+        },
+        {
+            "id": 4,       
+            "titulo": "Sigpe Interno",             
+            "link":  "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S"       
+        },
+        {
+            "id": 5,       
+            "titulo": "Tasaciones",             
+            "link":  "http://SERVER/Autorizaciones/CreaUrl.php?USUARIO=1465&PROG=VERFALLIDOSDOT0S"       
+        }
+    ],
+    "tablon":[
+        {
+            "id": 1,       
+            "fecha": "23/04/2024",             
+            "tipo":  "Fundación",       
+            "titulo": "Parte de Actividades Del 22 al 28 de Abril"            
+        },
+        {
+            "id": 2,       
+            "fecha": "21/04/2024",             
+            "tipo":  "Club Social",       
+            "titulo": "Reunión informativa Viaja a Madagascar"            
+        },
+        {
+            "id": 3,       
+            "fecha": "20/04/2024",             
+            "tipo":  "Institucional",       
+            "titulo": "Sorteo camiseta del Granada C.F."            
+        },
+        {
+            "id": 4,       
+            "fecha": "19/04/2024",             
+            "tipo":  "Club Social",       
+            "titulo": "La Fiesta de la Cerveza os espera"            
+        }
+    ],
+    "auth": {
+        "user": {
+            "_id":        "U971574",
+            "id_usuario": "U971574",
+            "centro":     "9352 - CI Desarrollo",
+            "name":       "Domingo Jesús López Pacheco",
+            "isActive":   true,
+            "roles":      []
+        },
+        "token": "123456789123456789"
+    },
+    "checktoken": {
+        "user": {
+            "_id":        "U971574",
+            "id_usuario": "U971574",
+            "centro":     "9352 - CI Desarrollo",
+            "name":       "Domingo Jesús López Pacheco",
+            "isActive":   true,
+            "roles":      []
+        },
+        "token": "123456789123456789"
+    }
+}

@@ -1,0 +1,29 @@
+<app-section-title titulo="Normativa"></app-section-title>
+<ul class="list-group">
+  <li class="list-group-item item-lista" 
+  *ngFor="let item of normativa; let i = index">
+    <a [href]="item.url"  target="_blank">
+      <div class="row">
+        <div class="col-md-2 m-0 pt-1 item-normativa item-normativa-fecha">
+            {{item.fecha}} 
+        </div>
+        <div class="col-md-2 m-0 pt-0 item-normativa item-normativa-tipo">
+          <div class="d-flex align-items-center"> 
+            <div class="div-icon-tipo"> 
+              <mat-icon *ngIf="item.tipo === 'Norma'" class="icon-tipo">description</mat-icon>
+              <mat-icon *ngIf="item.tipo === 'Comunicado'" class="icon-tipo">info</mat-icon>   
+            </div>
+            <div class="ml-2"> 
+              {{item.tipo}}
+            </div>
+          </div>          
+        </div>
+        <div class="col-md-8 m-0 p-1 item-normativa item-normativa-titulo">
+          <div [innerHtml]="item.titulo">
+          <!--Con innerHtml podemos incrustar el c�digo tal cual, y no tenemos que preocuparnos por las htmlEntities-->
+          </div>
+        </div>
+      </div> 
+    </a>
+  </li>
+</ul>

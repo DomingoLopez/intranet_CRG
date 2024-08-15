@@ -1,0 +1,49 @@
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #bbfc90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right,  #3f773f, var(--principal-color), var(--secondary-color));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #3f773f, var(--principal-color), var(--secondary-color));
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+}
+
+h3{
+    color: #4b4b4b;
+    font-size: 20px;
+}
+
+.list-consejos{
+    list-style-type:circle;
+}
+
+.form-control:focus {
+    border-color: var(--principal-color);
+    box-shadow: 0 0 0 0.2rem rgba(1, 120, 88, 0.25); /* Cambia el color y el tama�o de la sombra seg�n tus preferencias */
+  }
+
+.btn-login{
+    color: white;
+}
+
+.btn-login:hover{
+cursor: pointer !important;
+}
+
+
+.form-control::placeholder{
+color: rgb(189, 189, 189);
+}

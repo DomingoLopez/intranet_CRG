@@ -1,0 +1,184 @@
+/* Estilos Navegacion */
+#header{
+    background-color: var(--principal-color);
+    height: 100px;
+}
+
+#nav{
+    background-color: var(--secondary-color);
+    height: 50px;
+    width: 100%;
+    margin: 0 20px;
+    padding: 0 0 0 0;
+}
+
+.navegacion{
+    background-color: var(--secondary-color);
+}
+
+.navbar-nav{
+    height: 50px;
+}
+
+.nav-item{
+    padding-top:5px
+}
+
+.nav-item:hover{
+    background-color: var(--tertiary-color);
+}
+
+
+.menu-background-grey{
+    position: absolute;
+    background-color: gray;
+    opacity: 50%;
+    top: 150px;
+    right: 0px;
+    left: 0px;
+    bottom: -100vw;
+    z-index: 1000;
+}
+
+#submenu-wrapper{
+    height: 770px;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 100% !important;
+    top: 150px;
+    right: 0px;
+    left: 1rem;
+    bottom: -100vw;
+    z-index: 1500;
+
+}
+
+.fh{
+    height: 100%;
+}
+
+.active_menu{
+    background-color: var(--tertiary-color);
+}
+.active_menu a{
+    color: #FFCD00 !important;
+}
+
+// Triangulito debajo del menu seleccionado,
+// No funciona, probar mus adelante
+// .active_menu:after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0;
+//     left: 50%; /* Ajusta la posici�n horizontal si es necesario */
+//     transform: translateX(-50%); /* Centra horizontalmente el triangulo */
+//     color: #ffffff;
+//     width: 0;
+//     height: 0;
+//     border-right: 11px solid transparent;
+//     border-top: 0px solid transparent;
+//     border-left: 11px solid transparent;
+//     border-bottom: 9px solid #ffffff;
+// }
+
+.submenu-wrapper-container{
+    padding: 20px 20px 40px 20px;
+    opacity: 100% !important;
+    margin:0px !important;
+    max-width: 100%;
+}
+
+
+/*Estilos de dentro del wrapper, para los submenus*/
+.active_submenu{
+    background-color: var(--tertiary-color);
+}
+.active_submenu a{
+    color: #FFCD00 !important;
+}
+
+.btn-close:focus,
+.btn-close:active {
+    outline: none;
+    box-shadow: none;
+}
+.submenu-item-label a{
+    height: 100%;
+    max-width: calc( 100% - 52px );
+    display: inline-block;
+    text-decoration: none;
+    width: auto;
+    padding-left: 0;
+    color: #838181; 
+    font-size: 16px;
+}
+
+.submenu-item-label {
+    position: relative; /* Asegura que el contenedor sea relativo para el posicionamiento del �cono */
+  }
+  
+.submenu_label_arrow{
+    width: 9px;
+    margin-right: 10px;
+}
+
+.submenu-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.submenu-item:hover{
+    cursor: pointer;
+}
+
+.active_submenu_level{
+    background-color: #f1f1f1;
+    color: #000000; 
+}
+
+.active_submenu_level div a{
+    background-color: #f1f1f1;
+    color: #000000; 
+}
+
+
+.active_submenu_border{
+    border-right: 1px solid var(--secondary-color);
+}
+
+
+
+/* Estilos logo y cabecera */
+
+.header-row{
+    width: 55%;
+    margin: 0 auto;
+    height: 100%;
+    justify-content: center;
+}
+
+.logo-img{
+    max-width: 50%;
+
+}
+
+.text-usuario{
+    color:white;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-family: "Source Sans Pro Semibold", sans-serif;
+}
+
+.btn-extra-sm {
+    padding: 0rem 0.5rem; /* Ajusta el padding vertical seg�n sea necesario */
+    font-size: 0.8rem; /* Ajusta el tama�o de la fuente seg�n sea necesario */
+    text-align: right;
+}
+
+.logout-icon{
+    max-width: 16px;
+    max-height: 16px;
+    font-size: 14px;
+    padding-top:3px;
+}

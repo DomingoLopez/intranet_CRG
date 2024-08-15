@@ -1,0 +1,27 @@
+
+.result-item-label a{
+    height: 100%;
+    text-decoration: none;
+    width: auto;
+    padding-left: 0;
+    color: var(--principal-color); 
+    font-size: 16px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%; /* Esto asegura que el texto no se desborde del contenedor */
+    display: block;
+}
+
+.list-group:hover{
+    cursor:pointer;
+}
+
+.item-lista:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.item-lista:hover a{
+    color: #000000; 
+}
+

@@ -1,0 +1,13 @@
+
+.img-fav{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.div-fav {
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Asegura que el div ocupe toda la altura */
+}

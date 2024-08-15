@@ -1,0 +1,10 @@
+<h3 class="title-seccion">Mis Aplicaciones</h3>
+<ul class="list-group">
+    <li class="list-group-item item-lista" 
+    *ngFor="let item of misAplicaciones; let i = index">
+      <div class="result-item-label ">
+          <a [href]="item.url"  target="_blank">{{item.titulo}}</a> 
+      </div>
+    </li>
+  </ul> 
+  

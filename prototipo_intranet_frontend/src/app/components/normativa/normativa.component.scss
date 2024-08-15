@@ -1,0 +1,44 @@
+
+.item-lista a{
+    height: 100%;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    width: auto;
+    color: var(--principal-color); 
+    text-align: left;
+    font-size: 16px;
+    
+}
+
+
+.item-normativa-titulo div{
+    padding-left:3rem;
+}
+
+
+
+.list-group:hover{
+    cursor:pointer;
+}
+
+.item-lista:hover{
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.item-lista:hover a{
+    color: #000000; 
+}
+
+
+.icon-tipo {
+    cursor: pointer;
+    font-size:20px;
+    display: inline;
+    margin-bottom: 5px;
+}
+
+.div-icon-tipo{
+    padding-top:5px;
+    margin-right: 5px;
+}

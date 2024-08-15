@@ -1,0 +1,33 @@
+<!--Header-->
+<app-header></app-header>
+<!--Body-->
+<div class="row body-row">
+     
+    <div class="container-fluid">
+
+        <app-searchbar></app-searchbar>
+
+        <div id="main-body" class="container cap-percent-width-70">
+
+            <app-accesos-rapidos></app-accesos-rapidos>
+
+            <div class="row seccion-global">
+                <div id="seccion-izquierda" class="col-md-4 seccion">
+                    <app-favoritos></app-favoritos>
+                    <br><br> 
+                    <app-mis-aplicaciones></app-mis-aplicaciones>
+                    <br><br> 
+                    <h3 class="title-seccion">Otra sección</h3>
+                </div>
+                <div id ="seccion-derecha" class="col-md-8 seccion">
+                    <app-avisos></app-avisos>
+                    <br><br> 
+                    <app-normativa></app-normativa>
+                    <br><br> 
+                    <app-tablon></app-tablon>
+                </div> 
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

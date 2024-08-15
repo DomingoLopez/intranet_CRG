@@ -1,0 +1,127 @@
+<div id="header" class="container-fluid">
+  <div class="row header-row">
+    <div class="col-md-6 mx-auto d-flex align-items-center justify-content-left">
+      <a href="/intranet" ><img src="../../../assets/images/logo.png" class="logo-img" alt="Caja Rural Granada"></a>
+    </div>
+    <div class="col-md-6 d-flex mx-auto justify-content-end">
+      <div class="align-self-center text-end">
+        <p class="fs-6 text-usuario">
+            {{user?.nombre}}
+        </p>
+        <p class="fs-6 text-usuario">
+            {{user?.centro}} - {{user?.nomcentro}}
+        </p>
+        <button type="button" class="btn btn-danger btn-sm btn-extra-sm" (click)="cerrarSesion()">
+          Cerrar Sesión
+          <mat-icon class="logout-icon">power_settings_new</mat-icon>
+        </button>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid navegacion">
+    <div class="cap-percent-width-70">
+        <nav id="nav" class="navbar navbar-expand-lg justify-content-center">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                         <li class="nav-item" [class.active_menu]="isActive(item)" *ngFor="let item of menu()">
+                            <a class="nav-link text-white px-5 text-uppercase" (click)="openCloseSubmenuWrapper($event, item)" [href]="item.url"  target="_blank">{{ item.label }}</a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="menu-background-grey" [class.d-none]="!isWrapperMenuVisible" [class.d-inline]="isWrapperMenuVisible">
+</div>
+    <div id="submenu-wrapper" [class.d-none]="!isWrapperMenuVisible" [class.d-inline]="isWrapperMenuVisible">
+        <div class="container fh submenu-wrapper-container">
+            <div class="row justify-content-end">
+              <div class="col-auto ms-auto">
+                <button type="button" (click)="closeSubmenuWrapper()" class="btn-close" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="row fh">
+                <!--Submenú nivel 1-->              
+              <div class="col-md-3 fh active_submenu_border scrollable-element">
+                <div class="row align-items-center submenu-item"
+                      *ngFor="let item of currentItemsLevel1"
+                      [ngClass]="{ 'active_submenu_level': item === activeItemSubmenu1}"
+                      (mouseenter)="onSwitchingSubmenusLevel($event, item, 1)" 
+                      >
+                  <div class="col-md-2 d-flex justify-content-end">
+                    <app-menu-fav *ngIf="isActiveSubmenuLevel1(item) || item.is_fav" [menuItem]="item"></app-menu-fav> 
+                  </div>
+                  <div class="col-md-10 m-0 p-0 submenu-item-label d-flex justify-content-between align-items-center">
+                    <p *ngIf="item.url == '#' " class="mb-0">{{item.label}}</p>
+                    <a *ngIf="item.url != '#' "  [href]="item.url"  target="_blank">{{item.label}}</a>
+                    <img *ngIf="item.childs.length > 0"  class="submenu_label_arrow" src="../../../assets/images/right-arrow.svg" alt="Flecha hacia la derecha">
+                  </div>
+                </div>
+              </div> 
+              <!--Submenú nivel 2-->
+              <div class="col-md-3 fh scrollable-element"
+              [ngClass]="{ 'active_submenu_border': activeItemSubmenu2 != undefined }"
+              >
+                <div class="row align-items-center submenu-item" 
+                  *ngFor="let item of currentItemsLevel2"
+                  [ngClass]="{ 'active_submenu_level': item === activeItemSubmenu2}"
+                  (mouseenter)="onSwitchingSubmenusLevel($event, item, 2)" 
+                  >
+                  <div class="col-md-2 d-flex justify-content-end">
+                    <app-menu-fav *ngIf="isActiveSubmenuLevel2(item) || item.is_fav" [menuItem]="item"></app-menu-fav> 
+                  </div>
+                  <div class="col-md-10 m-0 p-0 submenu-item-label d-flex justify-content-between align-items-center">
+                    <p *ngIf="item.url == '#' " class="mb-0">{{item.label}}</p>
+                    <a *ngIf="item.url != '#' "  [href]="item.url"  target="_blank">{{item.label}}</a>
+                    <img *ngIf="item.childs.length > 0"  class="submenu_label_arrow" src="../../../assets/images/right-arrow.svg" alt="Flecha hacia la derecha">
+                  </div>
+                </div>
+              </div>
+                <!--Submenú nivel 3-->
+              <div class="col-md-3 fh scrollable-element"
+              [ngClass]="{ 'active_submenu_border': activeItemSubmenu3 != undefined }"
+              >
+                <div class="row align-items-center submenu-item" 
+                  *ngFor="let item of currentItemsLevel3"
+                  [ngClass]="{ 'active_submenu_level': item === activeItemSubmenu3}"
+                  (mouseenter)="onSwitchingSubmenusLevel($event, item, 3)" 
+                  >
+                  <div class="col-md-2 d-flex justify-content-end">
+                    <app-menu-fav *ngIf="isActiveSubmenuLevel3(item) || item.is_fav" [menuItem]="item"></app-menu-fav> 
+                  </div>
+                  <div class="col-md-10 m-0 p-0 submenu-item-label d-flex justify-content-between align-items-center">
+                    <p *ngIf="item.url == '#' " class="mb-0">{{item.label}}</p>
+                    <a *ngIf="item.url != '#' " [href]="item.url"  target="_blank">{{item.label}}</a>
+                    <img *ngIf="item.childs.length > 0"  class="submenu_label_arrow" src="../../../assets/images/right-arrow.svg" alt="Flecha hacia la derecha">
+                  </div>
+                </div>
+              </div>
+                <!--Submenú nivel 4-->              
+              <div class="col-md-3 fh scrollable-element"
+              [ngClass]="{ 'active_submenu_border': activeItemSubmenu4 != undefined }"
+              >
+                <div class="row align-items-center submenu-item"  
+                  *ngFor="let item of currentItemsLevel4"
+                  [ngClass]="{ 'active_submenu_level': item === activeItemSubmenu4}"
+                  (mouseenter)="onSwitchingSubmenusLevel($event, item, 4)" 
+                  >
+                  <div class="col-md-2 d-flex justify-content-end">
+                    <app-menu-fav *ngIf="isActiveSubmenuLevel4(item) || item.is_fav" [menuItem]="item"></app-menu-fav> 
+                  </div>
+                  <div class="col-md-10 m-0 p-0 submenu-item-label d-flex justify-content-between align-items-center">
+                    <p *ngIf="item.url == '#' " class="mb-0" >{{item.label}}</p>
+                    <a *ngIf="item.url != '#' " [href]="item.url"  target="_blank">{{item.label}}</a>
+                    <img *ngIf="item.childs.length > 0"  class="submenu_label_arrow" src="../../../assets/images/right-arrow.svg" alt="Flecha hacia la derecha">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+
